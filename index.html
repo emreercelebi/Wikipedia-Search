@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wikipedia Viewer</title>
+	<meta charset="utf-8">
+	<link rel = "stylesheet" href = "style.css">
+	<link rel = "stylesheet" href = "bootstrap.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+</head>
+<body>
+
+	<h1 id = "header" class = "text-center">Wikipedia Search Engine</h1>
+	<div id = "search" class = "text-center">
+		<input id = "search-bar" type = "text" placeholder = "Enter search here" size = "70" value = "">
+	</div>
+	<div class = "row">
+		<div class = "col-sm-4"></div>
+		<div class = "col-sm-2">
+			<div class = "text-left">
+				<div id = "search-button">
+					<button class = "btn btn-sm" onclick = 'getQuery()'>Search</button>
+				</div>
+			</div>
+		</div>
+		<div class = "col-sm-2">
+			<div class = "text-right">
+				<a id = "random-link" href = "" target = "_blank" >
+					<div id = "random-button">
+						<button class = "btn btn-sm" onclick = "setNewRandom()">¯\_(ツ)_/¯</button>
+					</div>
+				</a>
+			</div>
+		</div>		
+		<div class = "col-sm-4"></div>
+
+		
+
+	</div>
+
+	<div id = "search-results">
+		<a href = 'https://www.youtube.com/' target = '_blank'>
+			<div class = "container card" id = "result">
+				<h3 id = "title">Result Title</h3>
+				<p id ="description">Article description will go here</p>				
+			</div>
+		</a>			
+	</div>
+
+
+
+</body>
+</html>

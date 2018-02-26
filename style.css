@@ -1,0 +1,39 @@
+#search-button{
+	text-align: left;
+}
+
+#random-button{
+	float: right;
+}
+
+#header {
+	color: #69ea91;
+}
+
+#result {	
+	/*background-color: yellow;*/
+	color: black;
+	margin-bottom: 10px;
+	border-color: #69ea91;
+	border-width: 3px;
+}
+
+a:hover {
+	text-decoration: none;
+	background-color: black;
+}
+
+#search{
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+#search-bar{
+	border-color: #69ea91;
+	border-width: 5px;
+	border-radius: 5px;
+}
+
+#search-results{
+	padding-top: 30px;
+}
