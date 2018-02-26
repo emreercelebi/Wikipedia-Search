@@ -5,7 +5,6 @@ var random = "https://en.wikipedia.org/w/api.php?action=query&format=json&list=r
 $(document).ready(function(){
 	$.getJSON(random,function(json){
 		$('#random-link').attr("href","https://en.wikipedia.org/wiki/" + json.query.random[0].title.replace(" ","_"));
-		console.log(json.query.random[0].title);
 	})
 })
 
@@ -16,7 +15,6 @@ function getQuery() {
 
 function getWikiData(query){
 	$.getJSON(apiURL + query + apiURLend, function(json){
-		console.log(json);
 		addResults(json);
 	});
 }
@@ -25,11 +23,9 @@ function getWikiData(query){
 function addResults(json) {
 	$('#search-results').html("")
 	if (json[1]){
-		for (let i = 0; i < json[1].length; i++){
-			
-			setTimeout(function(){console.log("adding result");},3000);
-			let resultHTML = "<a href = " + json[3][i] +  " target = '_blank'><div class = 'animated fadeInUp'><div class = 'container card' id = 'result'><h3 id = 'title'>"
-			 + json[1][i] + "</h3><p id ='description'>" + json[2][i] + "</p></div></div></a>";
+		for (let i = 0; i < json[1].length; i++){			
+			let resultHTML = "<a href = " + json[3][i] +  " target = '_blank'><div class = 'container card' id = 'result'><h3 id = 'title'>"
+			 + json[1][i] + "</h3><p id ='description'>" + json[2][i] + "</p></div></a>";
 			$('#search-results').append(resultHTML);
 		}		
 	}
@@ -38,16 +34,6 @@ function addResults(json) {
 function setNewRandom(){
 	$.getJSON(random, function(json){
 		$('#random-link').attr("href", "https://en.wikipedia.org/wiki/" + json.query.random[0].title.replace(" ","_"));
-		console.log(json.query.random[0].title);
 	});
 }
 
-
-
-
-
-/*
-<div class = 'container' id = 'result' style='background-color: gray'>
-	<h3 id = 'title'>Result Title</h3>
-	<p id ='description'>Article description will go here</p>				
-</div>*/
